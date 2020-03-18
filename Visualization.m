@@ -1,4 +1,4 @@
-%%%% version 01.01.001
+
 
 function [D,QA]=Visualization(D,P,is_disp,is_show,save_fig,is_video)
 %%%% Changed by Yael in 24.02.20
@@ -52,7 +52,7 @@ end
    D.Im.Idisp_all=Idisp_all;
 end
 
-
+ 
 function PosImage=LocationDisplay(y_location,rows,n_line,num_lines,y_max)
 color = [255 0 0];
 x_vec=[-1514 1510];
@@ -97,7 +97,7 @@ close 1;
 % PosImage(A==765,:)=[];
 end
 
-
+ 
 function Ifinal=AdjustDisplay(Iline)
 %%%params
 gray_lev=180;
@@ -134,7 +134,7 @@ v = VideoWriter(file_path,'Uncompressed AVI');
 v.FrameRate=1;
 
 open(v);
- 
+
 for n=1:N
     frameI=ImageFrame_all{n};
     writeVideo(v,frameI);
@@ -146,6 +146,3 @@ close(v);
 % implay(vP.file);cd(old_cd);
 
 end
-
-
-
